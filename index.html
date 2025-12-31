@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Infection Infinite Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* ================= NAVBAR ================= */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:rgba(0,0,0,0.85);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    backdrop-filter: blur(8px);
+}
+
+header img{
+    height:50px;
+}
+
+nav a{
+    color:#d4af37;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:600;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#d4af37;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ================= HOME ================= */
+#home{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+      radial-gradient(circle at top, #1a1a1a, #000);
+}
+
+#home h1{
+    font-size:3.5rem;
+    color:#d4af37;
+    animation:fadeUp 1.5s ease;
+    text-shadow:0 0 25px rgba(212,175,55,0.4);
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding:90px 10%;
+    text-align:center;
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+section h2{
+    color:#d4af37;
+    margin-bottom:20px;
+    font-size:2.2rem;
+}
+
+/* ================= ABOUT ================= */
+#about p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    color:#ccc;
+}
+
+/* ================= PROJECT ================= */
+.project-text{
+    max-width:900px;
+    margin:auto;
+    margin-bottom:50px;
+    color:#bbb;
+    line-height:1.7;
+}
+
+h3{
+    margin-top:40px;
+    color:#d4af37;
+    letter-spacing:1px;
+}
+
+.card{
+    background:linear-gradient(145deg,#111,#0c0c0c);
+    margin:30px auto;
+    padding:20px;
+    max-width:850px;
+    border-radius:15px;
+    box-shadow:0 0 30px rgba(212,175,55,0.15);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 0 45px rgba(212,175,55,0.35);
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+}
+
+.card p{
+    margin-top:15px;
+    color:#aaa;
+}
+
+.coming-soon{
+    margin-top:60px;
+    font-size:2rem;
+    color:#d4af37;
+    letter-spacing:3px;
+    opacity:0.8;
+    animation:pulse 2s infinite;
+}
+
+/* ================= CONTACT ================= */
+.social{
+    margin-top:30px;
+}
+
+.social a{
+    color:#d4af37;
+    font-size:2.8rem;
+    margin:0 20px;
+    transition:0.3s;
+}
+
+.social a:hover{
+    color:white;
+    transform:scale(1.2);
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    color:#777;
+    font-size:0.9rem;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pulse{
+    0%{opacity:0.5;}
+    50%{opacity:1;}
+    100%{opacity:0.5;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <img src="https://img.sanishtech.com/u/67d78b349b1120a242167afb7ed8405f.jpg" alt="Infection Infinite Studio">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="show">
+    <h1>HERE WE MAKE GAMES<br>TO CHANGE THE GAME WORLD</h1>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>ABOUT US</h2>
+    <p>
+        Hello Everyone, we are Infection Infinite Studio.  
+        A small team with a big vision.  
+        Our mission is to create deep story-driven strategy games.  
+        Our first project <b>UNREX</b> is where your choices shape the world.
+    </p>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+    <h2>PROJECT – UNREX</h2>
+
+    <p class="project-text">
+        UNREX is a story-strategy game where exploration, decisions,
+        and consequences define the journey.  
+        Every move you make changes the fate of the world.
+    </p>
+
+    <h3>MAIN CHARACTER</h3>
+    <div class="card">
+        <img src="https://img.sanishtech.com/u/f63b542a0911b6f169217185d08fed29.jpg">
+        <p>Main character concept – early development stage</p>
+    </div>
+
+    <h3>WORLD MAP</h3>
+    <div class="card">
+        <img src="https://img.sanishtech.com/u/5e3a5ee85df95b7c8baaf90f8fb489fe.jpg">
+        <p>Early world map showing continents and borders</p>
+    </div>
+
+    <div class="coming-soon">DETAILS COMING SOON</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>CONTACT US</h2>
+    <div class="social">
+        <a href="https://www.instagram.com/infection__inf" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1DEimiZGCH/" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2025 Infection Infinite Studio
+</footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 150){
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
